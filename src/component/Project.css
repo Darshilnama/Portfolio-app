@@ -1,0 +1,122 @@
+
+#project {
+    padding: 4rem 2rem;
+    background: linear-gradient(to bottom right, #000000, #000000);
+    color: white;
+    text-align: center;
+   
+  }
+  
+
+  .projectTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #00c6ff;
+    text-shadow: 0 0 8px rgba(0, 198, 255, 0.4);
+  }
+  
+
+  .projectdesc {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 3rem;
+    display: inline-block;
+  }
+  
+
+  .project-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 24px rgba(0, 198, 255, 3.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .project-item:hover {
+    transform: scale(1.015);
+  }
+  
+
+  .item-detail {
+    flex: 1 1 300px;
+    text-align: left;
+  }
+  
+  .p1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .p2 {
+    font-size: 1.1rem;
+    color: #aaa;
+  }
+  
+
+  .projimg {
+    flex: 1 1 300px;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 6px 18px rgba(0, 198, 255, 24);
+    transition: transform 0.3s ease;
+  }
+  
+  .projimg:hover {
+    transform: scale(1.05);
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    #project {
+      padding: 3rem 1.5rem;
+    }
+  
+    .projectTitle {
+      font-size: 2rem;
+    }
+  
+    .projectdesc {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+  
+    .project-item {
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 1.5rem;
+    }
+  
+    .item-detail {
+      text-align: center;
+      flex: none;
+    }
+  
+    .p1 {
+      font-size: 1.4rem;
+    }
+  
+    .p2 {
+      font-size: 1rem;
+      color: #ccc;
+    }
+  
+    .projimg {
+      width: 90%;
+      max-width: 320px;
+      height: auto;
+      box-shadow: 0 4px 16px rgba(0, 198, 255, 20);
+    }
+  }
+  
+  

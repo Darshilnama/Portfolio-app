@@ -1,0 +1,208 @@
+#about {
+    width: 100%;
+    max-width: 80rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#about::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(100, 149, 237, 0.1) 0%, transparent 70%);
+    z-index: 0;
+}
+
+#about::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(100, 149, 237, 0.1) 0%, transparent 70%);
+    z-index: 0;
+}
+
+.aboutTitle {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #64b5f6, #1e88e5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 8px rgba(30, 144, 255, 0.3);
+}
+
+.aboutDesc {
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 60rem;
+    color: #b8c2cc;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+    background: rgba(30, 41, 59, 0.7);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(100, 149, 237, 0.2);
+}
+
+.aboutBars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.aboutBar {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background: rgba(30, 41, 59, 0.7);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(100, 149, 237, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.aboutBar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, #64b5f6, #1e88e5);
+    transition: width 0.3s ease;
+}
+
+.aboutBar:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(100, 149, 237, 0.3);
+    background: rgba(30, 41, 59, 0.9);
+}
+
+.aboutBar:hover::before {
+    width: 10px;
+}
+
+.aboutBarImg {
+    height: 4rem;
+    width: 4rem;
+    margin-right: 2rem;
+    filter: drop-shadow(0 5px 10px rgba(100, 149, 237, 0.5));
+    transition: transform 0.3s ease;
+}
+
+.aboutBar:hover .aboutBarImg {
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 5px 15px rgba(100, 149, 237, 0.8));
+}
+
+.aboutBarText {
+    text-align: left;
+    flex: 1;
+}
+
+.aboutBarText h2 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: #e2e8f0;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.aboutBarText p {
+    color: #94a3b8;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    #about {
+        padding: 3rem 1rem;
+        border-radius: 1rem;
+    }
+    
+    .aboutTitle {
+        font-size: 2.2rem;
+    }
+    
+    .aboutDesc {
+        font-size: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .aboutBars {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+    
+    .aboutBar {
+        padding: 1.5rem;
+    }
+    
+    .aboutBarImg {
+        height: 3rem;
+        width: 3rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .aboutBar {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .aboutBarImg {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .aboutBarText {
+        text-align: center;
+    }
+    
+    .aboutBar::before {
+        width: 100%;
+        height: 5px;
+        transition: height 0.3s ease;
+    }
+    
+    .aboutBar:hover::before {
+        height: 10px;
+        width: 100%;
+    }
+} 
