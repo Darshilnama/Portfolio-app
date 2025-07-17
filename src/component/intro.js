@@ -21,7 +21,11 @@ function Intro() {
             <br/>
             visually appealing and user friendly websites.
         </p>
-        <Link to='contactpage'>
+        <Link to='contactpage'
+           spy={true} 
+           smooth={true} 
+           offset={-100} 
+           duration={500} >
          
           <button className='btn2'>
             <img src={btnimg} alt='img' className='btnimg2'/>
